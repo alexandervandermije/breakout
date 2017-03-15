@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Breakout</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+        <style>
+            @import url('https://fonts.googleapis.com/css?family=Fascinate+Inline|Iceland|Monoton|Press+Start+2P');
+        </style>
+        <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+        <link href="stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" />
+        <link href="stylesheets/print.css" media="print" rel="stylesheet" type="text/css" />
+            <!--[if IE]>
+                <link href="stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+                <![endif]-->
+
+        <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    </head>
+    <body ng-app="breakoutApp" ng-controller="MainController">
+        <div id="container">
+            <canvas id="breakoutCanvas"></canvas>
+            <h2 ng-hide='gameStarted'>Breakout</h2>
+            <button ng-click="startGame()" ng-hide='gameStarted' class="controlGameButton btn btn-success">Start Game</button>
+            <div id='UIRow' ng-show='gameStarted'>
+                <p id='scoreCounter'>Score : {{score}}</p>
+                <p id='livesCounter'>Lives :{{lives}}</p>
+
+            </div>
+            <p ng-hide='gameStarted' id='controls'>Use left and right arrow keys to control the paddle</p>
+
+            <p id='congratulationText' ng-show='gameWon && gameStarted == false'>You Won! Congratulations! </br>Why not play another game! </p>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+
+        <script src="js/vendor/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

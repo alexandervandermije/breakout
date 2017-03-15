@@ -1,0 +1,104 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+$logoColor : #0060ff;
+@font-face
+{
+	font-family: 'Fascinate Inline', cursive;
+	font-family: 'Monoton', cursive;
+	font-family: 'Press Start 2P', cursive;
+	font-family: 'Iceland', cursive;
+	font-family: 'VT323', monospace;
+}
+p
+{
+	font-family: 'Press Start 2P';
+    color:white;
+}
+#container
+{
+	width:960px;
+	height:600px;
+	margin-left: auto;
+    margin-right: auto;
+}
+h2
+{
+	top: 80px;
+    left: 0;
+    right:0;
+    position: absolute;
+    font-size: 190px;
+	text-align:center;
+	font-family:'VT323';
+	text-transform:uppercase;
+	color: complement($logoColor);
+	text-shadow: 6px 6px $logoColor;
+}
+canvas 
+{
+	background: black;
+	display: block;
+	margin: 0 auto;
+}
+#breakoutCanvas
+{
+	width:100%;
+	height:100%;
+}
+.controlGameButton
+{
+	width:13em;
+	height:2em;
+	text-align:center;
+	position: absolute;
+    top: 290px;
+    left: 0;
+    right:0;
+    margin-left:auto;
+    margin-right:auto;
+	font-size:2em;
+	font-family: 'Press Start 2P';
+}
+#UIRow
+{
+	font-size: 36px;
+    position: absolute;
+    top: 5px;
+    
+    margin-left:auto;
+    margin-right:auto;
+    p{
+    	display:inline;
+    }
+    #livesCounter
+    {
+    	margin-left: 265px;
+    }
+    #scoreCounter
+    {
+    	margin-left:30px;
+    }
+}
+#controls
+{
+    position:absolute;
+    left:0;
+    right:0;
+    top:425px;
+    text-align:center;
+}
+#congratulationText
+{
+	border: 10px white;
+	position:absolute;
+	top:30px;
+	left:0;
+	right:0;
+	text-align:center;
+	font-size:26px;
+}
